@@ -2,7 +2,7 @@
 
 Quote/0 の Canvas API に送る `windowData` JSON を、実機画面サイズ(296×152px)の枠でプレビューし、レイアウトの見切れを送信前に確認するツール。
 
-- 公開 URL: `https://<owner>.github.io/quote0-canvas-preview/`(GitHub Pages 有効化後)
+- Preview(GitHub Pages): https://ham4690.github.io/quote0-canvas-preview/
 - 関連: [quote0-batch](https://github.com/Ham4690/quote0-batch)(Quote/0 連携バッチ本体)
 
 ## 使い方
