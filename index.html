@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Canvas レンダラー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/ui/styles.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">quote/0 &middot; Canvas API</p>
+    <h1>送信前に、実機の296&times;152px枠でレイアウト崩れを確認する</h1>
+    <p>
+      <code>windowData</code> JSON を貼ると、実機画面サイズ(296&times;152px、Image API 仕様記載値)の枠内でレンダリングする。
+      赤点線は画面の境界。境界をまたいで描画される要素があれば、それが「見切れ」の原因。
+      tw(Tailwind 風ユーティリティ)は主要な flex / spacing 系のみ簡易解釈、<code>props.style</code> は値をそのまま適用する。
+    </p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="panel-title">
+        <h2>入力 — CanvasPayload / windowData</h2>
+      </div>
+      <div class="samples" id="samples"></div>
+      <p class="hint" id="sample-hint"></p>
+      <textarea id="input" spellcheck="false"></textarea>
+      <div class="error" id="error"></div>
+      <p class="note">
+        <strong>貼る内容:</strong> <code>Send</code> に渡す実際の <code>CanvasPayload</code>(<code>{"windowData":{...}}</code> を含む全体)でも、<code>windowData</code> 単体でも、<code>default</code> 配列単体でも認識する。
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>プレビュー — 実機 296&times;152px</h2>
+        <div class="view-toggle">
+          <button id="btn-debug" class="active">境界表示</button>
+          <button id="btn-clip">実機想定(クリップ)</button>
+        </div>
+      </div>
+      <div class="device-stage">
+        <div class="bezel">
+          <div class="screen" id="screen" data-debug="true"></div>
+        </div>
+        <p class="caption">実寸 296&times;152px(e-inkは等倍で見ないと余白感が狂うため拡大なし)</p>
+        <div class="stats">
+          <div class="stat" id="stat-w"><p class="k">横オーバーフロー</p><p class="v">—</p></div>
+          <div class="stat" id="stat-h"><p class="k">縦オーバーフロー</p><p class="v">—</p></div>
+        </div>
+      </div>
+      <p class="note">
+        <strong>注意:</strong> 実機の正確な解像度・有効フォント・<code>tw</code> 構文の全体像は未検証(<a href="https://github.com/Ham4690/quote0-batch/blob/main/docs/design-docs/0005-canvas-api-migration.md" target="_blank" rel="noopener">0005 Design Doc の Open Questions</a>)。
+        ここでの確認はブラウザの flexbox 計算によるシミュレーションであり、実機確定ではない。送信前の大まかな見切れ検知用に使う。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Canvas API 仕様: <a href="https://dot.mindreset.tech/docs/service/open/canvas_api" target="_blank" rel="noopener">dot.mindreset.tech/docs/service/open/canvas_api</a>
+    &nbsp;/&nbsp; 画面解像度(296&times;152px)は Image API ドキュメント記載値を転用(Canvas API ドキュメント自体に寸法記載なし)。
+  </footer>
+
+  <script type="module" src="src/ui/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "windowData": {
+    "default": [
+      {
+        "type": "div",
+        "props": {
+          "tw": "flex flex-col w-full h-full justify-between p-4",
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "tw": "flex flex-col gap-1",
+                "children": [
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 28,
+                        "fontWeight": 700
+                      },
+                      "children": "東京 雨のち曇"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 16
+                      },
+                      "children": "07/24(金)"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "div",
+              "props": {
+                "tw": "flex flex-col gap-1",
+                "children": [
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 18
+                      },
+                      "children": "最低 26℃ / 最高 33℃"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 14
+                      },
+                      "children": "降水 0-6 10% / 6-12 20% / 12-18 40% / 18-24 50%"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "span",
+              "props": {
+                "style": {
+                  "fontSize": 12,
+                  "alignSelf": "flex-end"
+                },
+                "children": "2026年07月24日00:00"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "link": "https://www.jma.go.jp/bosai/forecast/#area_code=130000",
+  "refreshNow": true
+}

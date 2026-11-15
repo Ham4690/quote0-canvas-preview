@@ -1,0 +1,155 @@
+{
+  "windowData": {
+    "default": [
+      {
+        "type": "div",
+        "props": {
+          "tw": "flex flex-row w-full h-full justify-between p-2",
+          "children": [
+            {
+              "type": "div",
+              "props": {
+                "tw": "flex flex-col justify-between",
+                "style": {
+                  "width": "48%"
+                },
+                "children": [
+                  {
+                    "type": "div",
+                    "props": {
+                      "tw": "flex flex-col",
+                      "children": [
+                        {
+                          "type": "span",
+                          "props": {
+                            "style": {
+                              "fontSize": 22,
+                              "fontWeight": 700
+                            },
+                            "children": "東京"
+                          }
+                        },
+                        {
+                          "type": "span",
+                          "props": {
+                            "style": {
+                              "fontSize": 15
+                            },
+                            "children": "雨のち曇"
+                          }
+                        },
+                        {
+                          "type": "span",
+                          "props": {
+                            "style": {
+                              "fontSize": 12
+                            },
+                            "children": "07/24(金)"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "div",
+                    "props": {
+                      "tw": "flex flex-col",
+                      "children": [
+                        {
+                          "type": "span",
+                          "props": {
+                            "style": {
+                              "fontSize": 12
+                            },
+                            "children": "最低 26℃"
+                          }
+                        },
+                        {
+                          "type": "span",
+                          "props": {
+                            "style": {
+                              "fontSize": 12
+                            },
+                            "children": "最高 33℃"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 9
+                      },
+                      "children": "2026年07月24日00:00"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "div",
+              "props": {
+                "tw": "flex flex-col justify-center gap-1",
+                "style": {
+                  "width": "48%"
+                },
+                "children": [
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 9,
+                        "fontWeight": 600
+                      },
+                      "children": "降水確率"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 11
+                      },
+                      "children": "0-6時 10%"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 11
+                      },
+                      "children": "6-12時 20%"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 11
+                      },
+                      "children": "12-18時 40%"
+                    }
+                  },
+                  {
+                    "type": "span",
+                    "props": {
+                      "style": {
+                        "fontSize": 11
+                      },
+                      "children": "18-24時 50%"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "link": "https://www.jma.go.jp/bosai/forecast/#area_code=130000",
+  "refreshNow": true
+}

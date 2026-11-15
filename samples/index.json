@@ -1,0 +1,33 @@
+{
+  "default": "weather-candidate-b",
+  "samples": [
+    {
+      "id": "weather-current",
+      "label": "現状(見切れ)",
+      "kind": "bad",
+      "file": "weather-current.json",
+      "description": "降水確率行が約46文字あり、p-4適用後の264px幅で折り返して2行化。必要高さが174pxとなり152pxの枠を22pxはみ出す(署名行が枠外へ)。"
+    },
+    {
+      "id": "weather-candidate-b",
+      "label": "修正案B(1カラム+降水4分割)",
+      "kind": "good",
+      "file": "weather-candidate-b.json",
+      "description": "降水4項目を等幅(25%)に分割し、折り返し依存を解消。見出し「降水確率(時間帯)」と「0-6時」等の時間帯表記を明示。"
+    },
+    {
+      "id": "weather-candidate-c",
+      "label": "修正案C(2カラム)",
+      "kind": "good",
+      "file": "weather-candidate-c.json",
+      "description": "左(地点・概況・日付・気温・署名) / 右(降水4区分を縦積み)の2カラム。降水を短い独立行にし、値が変わっても折り返しにくい。"
+    },
+    {
+      "id": "weather-overflow",
+      "label": "見切れ再現サンプル",
+      "kind": "",
+      "file": "weather-overflow.json",
+      "description": "現状サンプルの降水行に臨時情報の長文を足し、見切れ検知の動作を確認するためのもの。"
+    }
+  ]
+}
